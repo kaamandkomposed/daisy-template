@@ -1,5 +1,7 @@
 ---
 import Font from '../components/Font.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
 	title: string;
@@ -20,8 +22,10 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="m-5">
+		<Navbar></Navbar>
+		<div class="m-5 mt-10 min-h-screen">
 			<slot />
 		</div>
+		<Footer company='ACME'></Footer>
 	</body>
 </html>
