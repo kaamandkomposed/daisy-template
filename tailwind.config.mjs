@@ -1,8 +1,23 @@
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
+			},
+			fontSize: {
+				sm: '0.8rem',
+				base: '16px',
+				xl: '1.2rem',
+				'2xl': '1.4rem',
+				'3xl': '1.8rem',
+				'4xl': '2.2rem',
+				'5xl': '2.5rem',
+			}
+		},
 	},
 	plugins: [
 		require('@tailwindcss/typography'),
